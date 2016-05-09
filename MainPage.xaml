@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="CityWeather.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CityWeather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="LightPink" Margin="0,6,0,-6">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="447" Margin="525,80,0,0" VerticalAlignment="Top" Width="637"/>
+        <TextBox x:Name="city" HorizontalAlignment="Left" Margin="347,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter City" Height="48" Width="178" FontFamily="Lucida Sans" FontSize="20" KeyUp="textbox_KeyUp" TextAlignment="DetectFromContent"/>
+        <TextBox x:Name="country" HorizontalAlignment="Left" Margin="347,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter Country" Height="48" Width="178" FontFamily="Lucida Sans" FontSize="20" KeyUp="textbox_KeyUp"/>
+        <Button x:Name="button" Content="Find" HorizontalAlignment="Left" Margin="395,358,0,0" VerticalAlignment="Top" Height="44" Width="73" Click="button_Click"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="291,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="255">
+        	<Run Text="Current"/>
+        	<Run Text=" Time"/>
+        	<Run Text=":"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="293,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="208" Text="Temperature:"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="293,557,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30">
+        	<Run Text="Condition"/>
+        	<Run Text=" :"/>
+        </TextBlock>
+        <TextBlock x:Name="result2" HorizontalAlignment="Left" Margin="578,494,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30"/>
+        <TextBlock x:Name="result3" HorizontalAlignment="Left" Margin="578,557,0,0" TextWrapping="Wrap" Text="TBD" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="373,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="48" Foreground="#FFB92525">
+        	<Run Text="One Click "/>
+        	<Run Foreground="#FF54B925" Text="Weather"/>
+        	<Run Text=" "/>
+        	<Run Foreground="#FF47B925" Text="App"/>
+        </TextBlock>
+        <CheckBox x:Name="celsius" Content="°C" HorizontalAlignment="Left" Margin="728,497,0,0" VerticalAlignment="Top" Width="60" Checked="celsius_Checked" Unchecked="celsius_Unchecked" IsChecked="True"/>
+        <CheckBox x:Name="fahrenheit" Content="°F" HorizontalAlignment="Left" Margin="812,497,0,0" VerticalAlignment="Top" Width="54" Checked="fahrenheit_Checked" Unchecked="fahrenheit_Unchecked"/>
+        <CheckBox x:Name="kelvin" Content="K" HorizontalAlignment="Left" Margin="899,495,0,0" VerticalAlignment="Top" Width="54" Checked="kelvin_Checked" Unchecked="kelvin_Unchecked"/>
+        <TextBlock x:Name="result1" HorizontalAlignment="Left" Margin="578,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="109" Text="??:??"/>
+        <Button x:Name="button1" Content="More details" HorizontalAlignment="Left" Margin="536,638,0,0" VerticalAlignment="Top" Width="151" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="291,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="255" Text="Max. Temp.:" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="293,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="208" Text="Min. Temp.:" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="293,557,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Text="Humidity:" Visibility="Collapsed"/>
+        <TextBlock x:Name="result5" HorizontalAlignment="Left" Margin="578,494,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Visibility="Collapsed"/>
+        <TextBlock x:Name="result6" HorizontalAlignment="Left" Margin="578,557,0,0" TextWrapping="Wrap" Text="?%" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Visibility="Collapsed"/>
+        <TextBlock x:Name="result4" HorizontalAlignment="Left" Margin="578,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Width="109" Text="?" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="291,617,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Text="Description:" Visibility="Collapsed"/>
+        <TextBlock x:Name="result7" HorizontalAlignment="Left" Margin="578,617,0,0" TextWrapping="Wrap" Text="TBD" VerticalAlignment="Top" FontFamily="Lucida Sans" FontSize="30" Visibility="Collapsed"/>
+        <Button x:Name="button2" Content="Back to main info" HorizontalAlignment="Left" Margin="536,670,0,0" VerticalAlignment="Top" Width="151" Click="button2_Click" Visibility="Collapsed"/>
+    </Grid>
+</Page>
